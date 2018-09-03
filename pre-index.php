@@ -16,6 +16,12 @@ if (!empty($_GET['lat']) && !empty($_GET['lon'])) {
 if ($blockIframe) {
     header('X-Frame-Options: DENY');
 }
+if ($discordLogin) {
+	if (!isset($_SESSION['user'])) {
+		header("Location: ./discord-login");
+		die();
+	}
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?= $locale ?>">
@@ -153,6 +159,14 @@ if ($blockIframe) {
             <div id="currentWeather"></div>
             <?php
         } ?>
+        <?php
+		if ($discordLogin) {
+			if (isset($_SESSION['user'])) {?>
+			<span style='color: dodgerblue;'><?php echo $_SESSION['user']; ?></span>
+		<?php
+			}
+		}
+        ?>
         <a href="#stats" id="statsToggle" class="statsNav" style="float: right;"><span
                 class="label"><?php echo i8ln('Stats') ?></span></a>
     </header>
