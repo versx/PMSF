@@ -65,6 +65,15 @@ $noMotd = true;
 $motdTitle = "Message of the Day";
 $motdContent = "This is an example MOTD<br>Do whatever you like with it.";
 
+/* Discord Login */
+$discordLogin = false;					// Force end users to auth to an external service. Supported: Discord
+$discordGuildId = 0;					// (Optional) If guild ID(s) are specified, user must be in at least one discord guild (server) to access map. Comma separated if multiple.
+//$discordRoleId = 0; 					// (Optional) If specified, user must be in one of these discord roles. Comma separated list of role ids. Requires bot configured below. Only supports single required guild.
+$discordBotClientId = 0;				// OAuth2 Client ID.
+$discordBotClientSecret = "";			// OAuth2 Client Secret. Client should have auth callback url of <yourserverurl>/auth_callback
+$discordBotRedirectUri = "https://website/discord-callback.php"; // Redirect callback to handle authentication.
+
+
 //-----------------------------------------------------
 // FRONTEND SETTINGS
 //-----------------------------------------------------
