@@ -54,6 +54,10 @@ $gmapsKey = "";                                                     // Google Ma
 
 $gAnalyticsId = "";                                                 // "" for empty, "UA-XXXXX-Y" add your Google Analytics tracking ID
 
+/* Google Ad-Sense */
+
+$gAdSenseId = "";										// "" for empty, "ca-pub-XXXXXXXX" add your Google Ad-Sense tracking ID
+
 /* Piwik Analytics */
 
 $piwikUrl = "";

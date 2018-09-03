@@ -106,6 +106,17 @@ if ($discordLogin) {
             <!-- End Google Analytics -->';
     }
     ?>
+	<?php
+	if ($gAdSenseId != "") {
+		echo '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<script>
+			  (adsbygoogle = window.adsbygoogle || []).push({
+				google_ad_client: "' . $gAdSenseId . '",
+				enable_page_level_ads: true
+			  });
+			</script>';
+	}
+	?>
     <?php
     if ($piwikUrl != "" && $piwikSiteId != "") {
         echo '<!-- Piwik -->
